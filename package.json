@@ -1,0 +1,51 @@
+{
+  "name": "electron-vite-react-sqlite3-tailwind-sample",
+  "version": "1.0.0",
+  "private": true,
+  "main": "build/main/main.js",
+  "scripts": {
+    "start": "node scripts/dev-server.js",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "build": "node scripts/build.js && electron-builder -c config/electron-builder.json",
+    "build:win": "node scripts/build.js && electron-builder -c config/electron-builder.json --win",
+    "build:mac": "node scripts/build.js && electron-builder -c config/electron-builder.json --mac",
+    "build:linux": "node scripts/build.js && electron-builder -c config/electron-builder.json --linux",
+    "build:dev": "node scripts/build.js",
+    "serve:renderer": "vite -c config/vite.js preview"
+  },
+  "devDependencies": {
+    "@react-dev-inspector/vite-plugin": "^2.0.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.21",
+    "chokidar": "^3.5.3",
+    "electron": "^21.2.3",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.5.3",
+    "prettier": "2.7.1",
+    "react-dev-inspector": "^2.0.0",
+    "tailwindcss": "3",
+    "typescript": "^4.8.4",
+    "vite": "^4.4.9",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "electron-updater": "^5.3.0",
+    "lucide-react": "^0.487.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sequelize": "^6.25.5",
+    "sqlite3": "^5.1.2",
+    "tailwind-merge": "^3.2.0",
+    "tw-animate-css": "^1.2.5"
+  }
+}
