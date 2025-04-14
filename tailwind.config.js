@@ -4,7 +4,8 @@ export const theme = {
   extend: {
     backgroundImage: {
       "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      "gradient-conic":
+        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
     },
     borderRadius: {
       lg: "var(--radius)",
@@ -54,6 +55,11 @@ export const theme = {
       },
     },
     keyframes: {
+      "caret-blink": {
+        "0%,70%,100%": { opacity: "1" },
+        "20%,50%": { opacity: "0" },
+      },
+
       "accordion-down": {
         from: {
           height: "0",
@@ -74,6 +80,7 @@ export const theme = {
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+      "caret-blink": "caret-blink 1.25s ease-out infinite",
     },
   },
 };
