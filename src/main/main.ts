@@ -21,7 +21,7 @@ function createWindow() {
     },
     // autoHideMenuBar: true,
   });
-
+  mainWindow.webContents.session.setSpellCheckerEnabled(false);
   if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
     const rendererPort = process.env.PORT || process.argv[2];
     mainWindow.loadURL(`http://localhost:${rendererPort}`);
